@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A5C3AC99C48E66833D84529 /* Pods_EmailsGroup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A2FD4BAC8323110872F8DBC /* Pods_EmailsGroup.framework */; };
+		C24C9DA42A7A485C00B8065B /* ShadowModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C9DA32A7A485C00B8065B /* ShadowModifier.swift */; };
+		C24C9DA62A7A4ABC00B8065B /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C9DA52A7A4ABC00B8065B /* ColorExtension.swift */; };
+		C24C9DA82A7A79B500B8065B /* AddEmailButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C9DA72A7A79B500B8065B /* AddEmailButton.swift */; };
+		C24C9DAA2A7A79D900B8065B /* CreateGroupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C9DA92A7A79D900B8065B /* CreateGroupButton.swift */; };
+		C24C9DAD2A7C286F00B8065B /* EmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24C9DAC2A7C286F00B8065B /* EmailViewModel.swift */; };
+		C25224862A7D872500197F25 /* EmailCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25224852A7D872500197F25 /* EmailCardView.swift */; };
+		C25224882A7D875400197F25 /* GroupCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25224872A7D875400197F25 /* GroupCardView.swift */; };
+		C252248A2A7D877700197F25 /* GroupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25224892A7D877700197F25 /* GroupModel.swift */; };
+		C252248C2A7D87D600197F25 /* GroupStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C252248B2A7D87D600197F25 /* GroupStore.swift */; };
+		C271A34B2A802FB100A243D2 /* EmailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C271A34A2A802FB100A243D2 /* EmailController.swift */; };
+		C27893DE2A7833F90028674B /* EmailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27893DD2A7833F90028674B /* EmailModel.swift */; };
+		C2809DDE2A795C89004CA635 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2809DDD2A795C89004CA635 /* SplashView.swift */; };
+		C2953E142A7EA1DE000BFADF /* GroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2953E132A7EA1DE000BFADF /* GroupViewModel.swift */; };
+		C2DE65FD2A74D87800252B50 /* EmailsGroupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE65FC2A74D87800252B50 /* EmailsGroupApp.swift */; };
+		C2DE65FF2A74D87800252B50 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE65FE2A74D87800252B50 /* HomeView.swift */; };
+		C2DE66012A74D87C00252B50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2DE66002A74D87C00252B50 /* Assets.xcassets */; };
+		C2DE66042A74D87C00252B50 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2DE66032A74D87C00252B50 /* Preview Assets.xcassets */; };
+		C2DE660E2A74DA9200252B50 /* CreateGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE660D2A74DA9200252B50 /* CreateGroupView.swift */; };
+		C2DE66102A74DA9F00252B50 /* EditGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE660F2A74DA9F00252B50 /* EditGroupView.swift */; };
+		C2DE66122A74E19600252B50 /* EmailStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE66112A74E19600252B50 /* EmailStore.swift */; };
+		C2DE66142A766B0100252B50 /* AddEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE66132A766B0000252B50 /* AddEmailViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7A2FD4BAC8323110872F8DBC /* Pods_EmailsGroup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmailsGroup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FAB7E2615175759C20630E7 /* Pods-EmailsGroup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailsGroup.release.xcconfig"; path = "Target Support Files/Pods-EmailsGroup/Pods-EmailsGroup.release.xcconfig"; sourceTree = "<group>"; };
+		9FBC6D5498B42C88D31A73F5 /* Pods-EllingsenAssessment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EllingsenAssessment.debug.xcconfig"; path = "Target Support Files/Pods-EllingsenAssessment/Pods-EllingsenAssessment.debug.xcconfig"; sourceTree = "<group>"; };
+		ABC11E5D817A6E5042894E62 /* Pods-EllingsenAssessment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EllingsenAssessment.release.xcconfig"; path = "Target Support Files/Pods-EllingsenAssessment/Pods-EllingsenAssessment.release.xcconfig"; sourceTree = "<group>"; };
+		B3927446F716715970AC1FD8 /* Pods-EmailsGroup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmailsGroup.debug.xcconfig"; path = "Target Support Files/Pods-EmailsGroup/Pods-EmailsGroup.debug.xcconfig"; sourceTree = "<group>"; };
+		C24C9DA32A7A485C00B8065B /* ShadowModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowModifier.swift; sourceTree = "<group>"; };
+		C24C9DA52A7A4ABC00B8065B /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		C24C9DA72A7A79B500B8065B /* AddEmailButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmailButton.swift; sourceTree = "<group>"; };
+		C24C9DA92A7A79D900B8065B /* CreateGroupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupButton.swift; sourceTree = "<group>"; };
+		C24C9DAC2A7C286F00B8065B /* EmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewModel.swift; sourceTree = "<group>"; };
+		C25224852A7D872500197F25 /* EmailCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailCardView.swift; sourceTree = "<group>"; };
+		C25224872A7D875400197F25 /* GroupCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCardView.swift; sourceTree = "<group>"; };
+		C25224892A7D877700197F25 /* GroupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupModel.swift; sourceTree = "<group>"; };
+		C252248B2A7D87D600197F25 /* GroupStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupStore.swift; sourceTree = "<group>"; };
+		C271A34A2A802FB100A243D2 /* EmailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailController.swift; sourceTree = "<group>"; };
+		C27893DD2A7833F90028674B /* EmailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailModel.swift; sourceTree = "<group>"; };
+		C2809DDD2A795C89004CA635 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		C2953E132A7EA1DE000BFADF /* GroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewModel.swift; sourceTree = "<group>"; };
+		C2DE65F92A74D87800252B50 /* EmailsGroup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmailsGroup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2DE65FC2A74D87800252B50 /* EmailsGroupApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailsGroupApp.swift; sourceTree = "<group>"; };
+		C2DE65FE2A74D87800252B50 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C2DE66002A74D87C00252B50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C2DE66032A74D87C00252B50 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C2DE660D2A74DA9200252B50 /* CreateGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupView.swift; sourceTree = "<group>"; };
+		C2DE660F2A74DA9F00252B50 /* EditGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGroupView.swift; sourceTree = "<group>"; };
+		C2DE66112A74E19600252B50 /* EmailStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailStore.swift; sourceTree = "<group>"; };
+		C2DE66132A766B0000252B50 /* AddEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmailViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C2DE65F62A74D87800252B50 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A5C3AC99C48E66833D84529 /* Pods_EmailsGroup.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18056672FAF98613998C36E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A2FD4BAC8323110872F8DBC /* Pods_EmailsGroup.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		190EF62D6DAC8820814546E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9FBC6D5498B42C88D31A73F5 /* Pods-EllingsenAssessment.debug.xcconfig */,
+				ABC11E5D817A6E5042894E62 /* Pods-EllingsenAssessment.release.xcconfig */,
+				B3927446F716715970AC1FD8 /* Pods-EmailsGroup.debug.xcconfig */,
+				7FAB7E2615175759C20630E7 /* Pods-EmailsGroup.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C24C9DA22A7A482F00B8065B /* Modifier */ = {
+			isa = PBXGroup;
+			children = (
+				C24C9DA32A7A485C00B8065B /* ShadowModifier.swift */,
+			);
+			path = Modifier;
+			sourceTree = "<group>";
+		};
+		C24C9DAB2A7AA60F00B8065B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C2DE66112A74E19600252B50 /* EmailStore.swift */,
+				C252248B2A7D87D600197F25 /* GroupStore.swift */,
+				C271A34A2A802FB100A243D2 /* EmailController.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C25224842A7D86FD00197F25 /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				C24C9DA72A7A79B500B8065B /* AddEmailButton.swift */,
+				C24C9DA92A7A79D900B8065B /* CreateGroupButton.swift */,
+				C25224852A7D872500197F25 /* EmailCardView.swift */,
+				C25224872A7D875400197F25 /* GroupCardView.swift */,
+			);
+			path = Subview;
+			sourceTree = "<group>";
+		};
+		C2809DD32A790747004CA635 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				C24C9DA22A7A482F00B8065B /* Modifier */,
+				C24C9DA52A7A4ABC00B8065B /* ColorExtension.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		C2DE65F02A74D87800252B50 = {
+			isa = PBXGroup;
+			children = (
+				C2DE65FB2A74D87800252B50 /* EmailsGroup */,
+				C2DE65FA2A74D87800252B50 /* Products */,
+				190EF62D6DAC8820814546E3 /* Pods */,
+				18056672FAF98613998C36E9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C2DE65FA2A74D87800252B50 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2DE65F92A74D87800252B50 /* EmailsGroup.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2DE65FB2A74D87800252B50 /* EmailsGroup */ = {
+			isa = PBXGroup;
+			children = (
+				C24C9DAB2A7AA60F00B8065B /* Data */,
+				C2DE65FC2A74D87800252B50 /* EmailsGroupApp.swift */,
+				C2809DD32A790747004CA635 /* Utility */,
+				C2DE660C2A74DA3500252B50 /* Model */,
+				C2DE660B2A74DA2900252B50 /* ViewModel */,
+				C2DE660A2A74DA1800252B50 /* View */,
+				C2DE66002A74D87C00252B50 /* Assets.xcassets */,
+				C2DE66022A74D87C00252B50 /* Preview Content */,
+			);
+			path = EmailsGroup;
+			sourceTree = "<group>";
+		};
+		C2DE66022A74D87C00252B50 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C2DE66032A74D87C00252B50 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C2DE660A2A74DA1800252B50 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C25224842A7D86FD00197F25 /* Subview */,
+				C2DE65FE2A74D87800252B50 /* HomeView.swift */,
+				C2DE660D2A74DA9200252B50 /* CreateGroupView.swift */,
+				C2DE660F2A74DA9F00252B50 /* EditGroupView.swift */,
+				C2809DDD2A795C89004CA635 /* SplashView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C2DE660B2A74DA2900252B50 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C2DE66132A766B0000252B50 /* AddEmailViewModel.swift */,
+				C24C9DAC2A7C286F00B8065B /* EmailViewModel.swift */,
+				C2953E132A7EA1DE000BFADF /* GroupViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C2DE660C2A74DA3500252B50 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C27893DD2A7833F90028674B /* EmailModel.swift */,
+				C25224892A7D877700197F25 /* GroupModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C2DE65F82A74D87800252B50 /* EmailsGroup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2DE66072A74D87C00252B50 /* Build configuration list for PBXNativeTarget "EmailsGroup" */;
+			buildPhases = (
+				6C12B287D7F792D4D33F07D6 /* [CP] Check Pods Manifest.lock */,
+				C2DE65F52A74D87800252B50 /* Sources */,
+				C2DE65F62A74D87800252B50 /* Frameworks */,
+				C2DE65F72A74D87800252B50 /* Resources */,
+				5C88B916C6A428581265D947 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EmailsGroup;
+			productName = EllingsenAssessment;
+			productReference = C2DE65F92A74D87800252B50 /* EmailsGroup.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C2DE65F12A74D87800252B50 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					C2DE65F82A74D87800252B50 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = C2DE65F42A74D87800252B50 /* Build configuration list for PBXProject "EmailsGroup" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C2DE65F02A74D87800252B50;
+			productRefGroup = C2DE65FA2A74D87800252B50 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2DE65F82A74D87800252B50 /* EmailsGroup */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C2DE65F72A74D87800252B50 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2DE66042A74D87C00252B50 /* Preview Assets.xcassets in Resources */,
+				C2DE66012A74D87C00252B50 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C88B916C6A428581265D947 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EmailsGroup/Pods-EmailsGroup-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EmailsGroup/Pods-EmailsGroup-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EmailsGroup/Pods-EmailsGroup-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C12B287D7F792D4D33F07D6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EmailsGroup-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C2DE65F52A74D87800252B50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2DE66142A766B0100252B50 /* AddEmailViewModel.swift in Sources */,
+				C24C9DAD2A7C286F00B8065B /* EmailViewModel.swift in Sources */,
+				C2953E142A7EA1DE000BFADF /* GroupViewModel.swift in Sources */,
+				C2DE66102A74DA9F00252B50 /* EditGroupView.swift in Sources */,
+				C2DE65FF2A74D87800252B50 /* HomeView.swift in Sources */,
+				C252248C2A7D87D600197F25 /* GroupStore.swift in Sources */,
+				C271A34B2A802FB100A243D2 /* EmailController.swift in Sources */,
+				C24C9DAA2A7A79D900B8065B /* CreateGroupButton.swift in Sources */,
+				C24C9DA42A7A485C00B8065B /* ShadowModifier.swift in Sources */,
+				C25224882A7D875400197F25 /* GroupCardView.swift in Sources */,
+				C27893DE2A7833F90028674B /* EmailModel.swift in Sources */,
+				C2DE660E2A74DA9200252B50 /* CreateGroupView.swift in Sources */,
+				C252248A2A7D877700197F25 /* GroupModel.swift in Sources */,
+				C2DE65FD2A74D87800252B50 /* EmailsGroupApp.swift in Sources */,
+				C25224862A7D872500197F25 /* EmailCardView.swift in Sources */,
+				C2DE66122A74E19600252B50 /* EmailStore.swift in Sources */,
+				C2809DDE2A795C89004CA635 /* SplashView.swift in Sources */,
+				C24C9DA82A7A79B500B8065B /* AddEmailButton.swift in Sources */,
+				C24C9DA62A7A4ABC00B8065B /* ColorExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C2DE66052A74D87C00252B50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C2DE66062A74D87C00252B50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C2DE66082A74D87C00252B50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3927446F716715970AC1FD8 /* Pods-EmailsGroup.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EmailsGroup/Preview Content\"";
+				DEVELOPMENT_TEAM = MJR9XG5HRX;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSContactsUsageDescription = "This app need to access contact list to fetch emails";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gsb.project;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C2DE66092A74D87C00252B50 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FAB7E2615175759C20630E7 /* Pods-EmailsGroup.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EmailsGroup/Preview Content\"";
+				DEVELOPMENT_TEAM = MJR9XG5HRX;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSContactsUsageDescription = "This app need to access contact list to fetch emails";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gsb.project;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C2DE65F42A74D87800252B50 /* Build configuration list for PBXProject "EmailsGroup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2DE66052A74D87C00252B50 /* Debug */,
+				C2DE66062A74D87C00252B50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2DE66072A74D87C00252B50 /* Build configuration list for PBXNativeTarget "EmailsGroup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2DE66082A74D87C00252B50 /* Debug */,
+				C2DE66092A74D87C00252B50 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C2DE65F12A74D87800252B50 /* Project object */;
+}
