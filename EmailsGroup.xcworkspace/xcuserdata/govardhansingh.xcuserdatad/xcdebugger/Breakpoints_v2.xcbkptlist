@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "7A79491B-E6D3-400A-BD5A-41955B448CF5"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "347C555C-8722-4DC4-B7D2-BEFF44E6CF23"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            scope = "1"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3A7B1DB6-A24C-4A69-AEC4-AA1561DE90D3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EmailsGroup/Data/GroupStore.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
+            landmarkName = "update(id:name:mailIDs:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3A7B1DB6-A24C-4A69-AEC4-AA1561DE90D3 - 864b021852e9fc43"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EmailsGroup.GroupStore.update(id: Swift.Int64, name: Swift.String, mailIDs: Swift.Array&lt;EmailsGroup.EmailModel&gt;) -&gt; ()"
+                  moduleName = "EmailsGroup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/govardhansingh/Desktop/EmailsGroup/EmailsGroup/Data/GroupStore.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "158"
+                  endingLineNumber = "158"
+                  offsetFromSymbolStart = "2899">
+               </Location>
+               <Location
+                  uuid = "3A7B1DB6-A24C-4A69-AEC4-AA1561DE90D3 - f3fdda749200ac76"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EmailsGroup.GroupStore.update(id: Swift.Int64, name: Swift.String, mailIDs: Swift.Array&lt;EmailsGroup.EmailModel&gt;) -&gt; Swift.Bool"
+                  moduleName = "EmailsGroup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/govardhansingh/Desktop/EmailsGroup/EmailsGroup/Data/GroupStore.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "158"
+                  endingLineNumber = "158"
+                  offsetFromSymbolStart = "2899">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F5432F79-534B-4FB2-95F2-A40366A7A12B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EmailsGroup/Data/GroupStore.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "update(id:name:mailIDs:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F5432F79-534B-4FB2-95F2-A40366A7A12B - 864b021852e9fddf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EmailsGroup.GroupStore.update(id: Swift.Int64, name: Swift.String, mailIDs: Swift.Array&lt;EmailsGroup.EmailModel&gt;) -&gt; ()"
+                  moduleName = "EmailsGroup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/govardhansingh/Desktop/EmailsGroup/EmailsGroup/Data/GroupStore.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "162"
+                  endingLineNumber = "162"
+                  offsetFromSymbolStart = "3509">
+               </Location>
+               <Location
+                  uuid = "F5432F79-534B-4FB2-95F2-A40366A7A12B - f3fdda749200adea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EmailsGroup.GroupStore.update(id: Swift.Int64, name: Swift.String, mailIDs: Swift.Array&lt;EmailsGroup.EmailModel&gt;) -&gt; Swift.Bool"
+                  moduleName = "EmailsGroup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/govardhansingh/Desktop/EmailsGroup/EmailsGroup/Data/GroupStore.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "162"
+                  endingLineNumber = "162"
+                  offsetFromSymbolStart = "3765">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "712ABC60-9228-44C6-BC5D-9D4878B7727B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EmailsGroup/Data/GroupStore.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "update(id:name:mailIDs:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "712ABC60-9228-44C6-BC5D-9D4878B7727B - 864b021852e9fd7a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EmailsGroup.GroupStore.update(id: Swift.Int64, name: Swift.String, mailIDs: Swift.Array&lt;EmailsGroup.EmailModel&gt;) -&gt; ()"
+                  moduleName = "EmailsGroup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/govardhansingh/Desktop/EmailsGroup/EmailsGroup/Data/GroupStore.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "165"
+                  endingLineNumber = "165"
+                  offsetFromSymbolStart = "3179">
+               </Location>
+               <Location
+                  uuid = "712ABC60-9228-44C6-BC5D-9D4878B7727B - f3fdda749200ad2c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EmailsGroup.GroupStore.update(id: Swift.Int64, name: Swift.String, mailIDs: Swift.Array&lt;EmailsGroup.EmailModel&gt;) -&gt; Swift.Bool"
+                  moduleName = "EmailsGroup"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/govardhansingh/Desktop/EmailsGroup/EmailsGroup/Data/GroupStore.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "164"
+                  endingLineNumber = "164"
+                  offsetFromSymbolStart = "3405">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A9213B81-C703-479F-8EA0-420A1A08C171"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EmailsGroup/View/SplashView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
