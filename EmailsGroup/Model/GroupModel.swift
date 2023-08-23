@@ -6,10 +6,8 @@
 //
 
 import Foundation
-struct GroupModel: Identifiable {
-    var id = UUID()
+struct GroupModel {
+    var id : Int64
     var name: String
     var email: [EmailModel]
 }
-
-extension GroupModel: Equatable {}

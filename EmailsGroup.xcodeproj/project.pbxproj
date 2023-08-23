@@ -21,12 +21,13 @@
 		C27893DE2A7833F90028674B /* EmailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27893DD2A7833F90028674B /* EmailModel.swift */; };
 		C2809DDE2A795C89004CA635 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2809DDD2A795C89004CA635 /* SplashView.swift */; };
 		C2953E142A7EA1DE000BFADF /* GroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2953E132A7EA1DE000BFADF /* GroupViewModel.swift */; };
+		C2A979022A95ED0E00625E99 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A979012A95ED0E00625E99 /* ImageExtension.swift */; };
+		C2A979062A95F93D00625E99 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A979052A95F93D00625E99 /* Constant.swift */; };
 		C2DE65FD2A74D87800252B50 /* EmailsGroupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE65FC2A74D87800252B50 /* EmailsGroupApp.swift */; };
 		C2DE65FF2A74D87800252B50 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE65FE2A74D87800252B50 /* HomeView.swift */; };
 		C2DE66012A74D87C00252B50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2DE66002A74D87C00252B50 /* Assets.xcassets */; };
 		C2DE66042A74D87C00252B50 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2DE66032A74D87C00252B50 /* Preview Assets.xcassets */; };
 		C2DE660E2A74DA9200252B50 /* CreateGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE660D2A74DA9200252B50 /* CreateGroupView.swift */; };
-		C2DE66102A74DA9F00252B50 /* EditGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE660F2A74DA9F00252B50 /* EditGroupView.swift */; };
 		C2DE66122A74E19600252B50 /* EmailStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE66112A74E19600252B50 /* EmailStore.swift */; };
 		C2DE66142A766B0100252B50 /* AddEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2DE66132A766B0000252B50 /* AddEmailViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -50,13 +51,14 @@
 		C27893DD2A7833F90028674B /* EmailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailModel.swift; sourceTree = "<group>"; };
 		C2809DDD2A795C89004CA635 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		C2953E132A7EA1DE000BFADF /* GroupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewModel.swift; sourceTree = "<group>"; };
+		C2A979012A95ED0E00625E99 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
+		C2A979052A95F93D00625E99 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		C2DE65F92A74D87800252B50 /* EmailsGroup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmailsGroup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2DE65FC2A74D87800252B50 /* EmailsGroupApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailsGroupApp.swift; sourceTree = "<group>"; };
 		C2DE65FE2A74D87800252B50 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C2DE66002A74D87C00252B50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2DE66032A74D87C00252B50 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C2DE660D2A74DA9200252B50 /* CreateGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupView.swift; sourceTree = "<group>"; };
-		C2DE660F2A74DA9F00252B50 /* EditGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGroupView.swift; sourceTree = "<group>"; };
 		C2DE66112A74E19600252B50 /* EmailStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailStore.swift; sourceTree = "<group>"; };
 		C2DE66132A766B0000252B50 /* AddEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,10 +126,28 @@
 		C2809DD32A790747004CA635 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				C2A979042A95F90D00625E99 /* Constant */,
+				C2A979032A95F8F500625E99 /* Extension */,
 				C24C9DA22A7A482F00B8065B /* Modifier */,
-				C24C9DA52A7A4ABC00B8065B /* ColorExtension.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		C2A979032A95F8F500625E99 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C24C9DA52A7A4ABC00B8065B /* ColorExtension.swift */,
+				C2A979012A95ED0E00625E99 /* ImageExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C2A979042A95F90D00625E99 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				C2A979052A95F93D00625E99 /* Constant.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		C2DE65F02A74D87800252B50 = {
@@ -177,7 +197,6 @@
 				C25224842A7D86FD00197F25 /* Subview */,
 				C2DE65FE2A74D87800252B50 /* HomeView.swift */,
 				C2DE660D2A74DA9200252B50 /* CreateGroupView.swift */,
-				C2DE660F2A74DA9F00252B50 /* EditGroupView.swift */,
 				C2809DDD2A795C89004CA635 /* SplashView.swift */,
 			);
 			path = View;
@@ -317,12 +336,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2DE66142A766B0100252B50 /* AddEmailViewModel.swift in Sources */,
+				C2A979022A95ED0E00625E99 /* ImageExtension.swift in Sources */,
 				C24C9DAD2A7C286F00B8065B /* EmailViewModel.swift in Sources */,
 				C2953E142A7EA1DE000BFADF /* GroupViewModel.swift in Sources */,
-				C2DE66102A74DA9F00252B50 /* EditGroupView.swift in Sources */,
 				C2DE65FF2A74D87800252B50 /* HomeView.swift in Sources */,
 				C252248C2A7D87D600197F25 /* GroupStore.swift in Sources */,
 				C271A34B2A802FB100A243D2 /* EmailController.swift in Sources */,
+				C2A979062A95F93D00625E99 /* Constant.swift in Sources */,
 				C24C9DAA2A7A79D900B8065B /* CreateGroupButton.swift in Sources */,
 				C24C9DA42A7A485C00B8065B /* ShadowModifier.swift in Sources */,
 				C25224882A7D875400197F25 /* GroupCardView.swift in Sources */,

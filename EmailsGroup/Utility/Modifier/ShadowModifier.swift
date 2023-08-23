@@ -22,8 +22,42 @@ struct ShadowModifier: ViewModifier {
     }
 }
 
+struct CircularButtonModifier: ViewModifier {
+    func body(content:Content) -> some View {
+        content
+            .foregroundColor(Color.main)
+            .padding()
+            .frame(width: 30, height: 30)
+            .background(
+                Circle()
+                    .fill(Color.background)
+                    .shadow(color: Color.main, radius: 0, x: 3, y: 3)
+            )
+            .overlay {
+                Circle()
+                    .stroke(Color.main, lineWidth: 2)
+            }
+    }
+}
+
+struct ButtonImageModifier: ViewModifier {
+    func body(content:Content) -> some View {
+        content
+            .foregroundColor(Color.main)
+            .font(.system(size: 25))
+    }
+}
+
 extension View {
     public func shadowModifier() -> some View {
         modifier(ShadowModifier())
+    }
+    
+    public func circularButtonModifier() -> some View {
+        modifier(CircularButtonModifier())
+    }
+    
+    public func buttonImageModifier() -> some View {
+        modifier(ButtonImageModifier())
     }
 }

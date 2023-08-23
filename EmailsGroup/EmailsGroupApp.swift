@@ -9,12 +9,18 @@ import SwiftUI
 
 @main
 struct EmailsGroupApp: App {
+    @StateObject var emailVM: EmailViewModel = EmailViewModel()
+    @StateObject var groupVM: GroupViewModel = GroupViewModel()
+
+    init() {
+        emailVM.requestAccess()
+    }
+    
     var body: some Scene {
         WindowGroup {
-//            SplashView()
-//            CreateGroupView(store: EmailViewModel())
-            HomeView()
-                .environmentObject(GroupViewModel())
+            SplashView()
+                .environmentObject(groupVM)
+                .environmentObject(emailVM)
         }
     }
 }

@@ -13,10 +13,12 @@ struct AddEmailButton: View {
     @ObservedObject private var addEmailVM = AddEmailViewModel()
     @FocusState private var focus: Bool
     var callBack: ()->()
+    
+    // MARK: - body
     var body: some View {
         HStack {
             if isTapped {
-                TextField("Email", text: $addEmailVM.email)
+                TextField(StringConstant.email, text: $addEmailVM.email)
                     .keyboardType(.emailAddress)
                     .autocorrectionDisabled()
                     
@@ -48,14 +50,13 @@ struct AddEmailButton: View {
                 } label: {
                     HStack{
                         if !isTapped {
-                            Text("Add New Email")
+                            Text(StringConstant.addNewEmail)
                                 .fontWeight(.bold)
                                 .foregroundColor(Color.main)
                         }
-                        
-                        Image(systemName: "plus.circle.fill")
-                            .foregroundColor(Color.main)
-                            .font(.system(size: 25))
+                
+                        Image.add
+                            .buttonImageModifier()
                             .rotationEffect(Angle.degrees(isTapped ? -45 : 0))
                             .rotationEffect(Angle.degrees((addEmailVM.emailPrompt == "") ? -45 : 0))
                     

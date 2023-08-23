@@ -15,7 +15,7 @@ class EmailStore {
 
     private let emails = Table("emails")
 
-    private let id = Expression<UUID>("id")
+    private let id = Expression<Int64>("id")
     private let email = Expression<String>("email")
     private let isSelected = Expression<Bool>("isSelected")
 
@@ -50,6 +50,7 @@ class EmailStore {
         }
         do {
             try database.run(emails.create { table in
+                table.column(id, primaryKey: .autoincrement)
                 table.column(email)
                 table.column(isSelected)
             })
@@ -58,7 +59,8 @@ class EmailStore {
             print(error)
         }
     }
-
+    
+    
     func insert(mail: String) -> Int64? {
         guard let database = db else { return nil }
 
@@ -80,7 +82,7 @@ class EmailStore {
         
         do {
             for mail in try database.prepare(self.emails) {
-                mails.append(EmailModel(mail: mail[email], isSelected: mail[isSelected]))
+                mails.append(EmailModel(id: mail[id], mail: mail[email], isSelected: mail[isSelected]))
             }
         } catch {
             print(error)
@@ -89,7 +91,7 @@ class EmailStore {
     }
 
 
-    func findTask(emailID: UUID) -> EmailModel? {
+    func findTask(emailID: Int64) -> EmailModel? {
         var mail: EmailModel = EmailModel(id: emailID, mail: "", isSelected: false)
         guard let database = db else { return nil }
 
@@ -105,7 +107,7 @@ class EmailStore {
         return mail
     }
 
-    func update(id: UUID, mail: String, status: Bool = false) -> Bool {
+    func update(id: Int64, mail: String, status: Bool = false) -> Bool {
         guard let database = db else { return false }
 
         let mails = emails.filter(self.id == id)
@@ -123,7 +125,7 @@ class EmailStore {
         return false
     }
 
-    func delete(id: UUID) -> Bool {
+    func delete(id: Int64) -> Bool {
         guard let database = db else {
             return false
         }

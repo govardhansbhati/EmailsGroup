@@ -6,8 +6,8 @@
 //
 
 import SwiftUI
-struct EmailModel: Identifiable, Codable {
-    var id = UUID()
+struct EmailModel:  Codable {
+    var id : Int64
     var mail: String
     var isSelected: Bool = false
 }

@@ -9,99 +9,120 @@ import SwiftUI
 import Contacts
 
 struct CreateGroupView: View {
-    @StateObject var store: EmailViewModel
+    
+    @EnvironmentObject var store: EmailViewModel
+    @EnvironmentObject var groupVM: GroupViewModel
+    @Environment(\.dismiss) private var dismiss
+    
     @State private var isAddingEmail = false
     @State private var isAddingGroup = false
-    @EnvironmentObject var groupVM: GroupViewModel
+    @State private var showingAlert = false
+    @State private var alertMsg: String = ""
     
-    @Environment(\.presentationMode) var presentationMode
+    var group : GroupModel?
     
     var backButton: some View {
         Button {
-            presentationMode.wrappedValue.dismiss()
+            store.refreshEmail()
+            dismiss.callAsFunction()
         } label: {
-            Image(systemName: "chevron.backward")
-                .foregroundColor(Color.main)
-                .padding()
-                .frame(width: 30, height: 30)
-                .background(
-                    Circle()
-                        .fill(Color.background)
-                        .shadow(color: Color.main, radius: 0, x: 3, y: 3)
-                )
-                .overlay {
-                    Circle()
-                        .stroke(Color.main, lineWidth: 2)
-                }
+            Image.back
+                .circularButtonModifier()
+        }
+    }
+    
+    var updateButton: some View {
+        Button {
+            guard let group = group else { return }
+            let selectedMails = store.latestEmails.filter({ $0.isSelected })
+            let updated = groupVM.updateGroup(name: group.name, id: group.id, mails: selectedMails)
+            if updated {
+                groupVM.fetchAllGroup()
+                dismiss.callAsFunction()
+            }
+        } label: {
+            HStack {
+                Text("Update \(group?.name ?? "")")
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.main)
+                    .padding(.horizontal)
+            }
+            
         }
     }
     
     var body: some View {
-        NavigationStack {
-            VStack(spacing:0){
-                    if store.error == nil {
-                        List {
-                            ForEach(store.latestEmails, id: \.id) { (email) in
-                                    Button(action: {
-                                        withAnimation {
-                                            store.onButtonSelect(email: email)
-                                        }
-                                    }) {
-                                        EmailCardView(email: email)
-                                    }.buttonStyle(.automatic)
-                                }
-                            .listRowBackground(Color.background)
-                            .listRowInsets(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
-                        }
-                
-                    } else {
-                        Text("error: \(store.error!.localizedDescription)")
+        VStack(spacing: SizeConstant.zero){
+            if store.error == nil {
+                List {
+                    ForEach(store.latestEmails, id: \.id) { (email) in
+                        Button(action: {
+                            withAnimation {
+                                store.onButtonSelect(email: email)
+                            }
+                        }) {
+                            EmailCardView(email: email)
+                        }.buttonStyle(.automatic)
                     }
+                    .listRowBackground(Color.background)
+                    .listRowInsets(EdgeInsets(top: SizeConstant.padding_5,
+                                              leading: SizeConstant.padding_10,
+                                              bottom: SizeConstant.padding_5,
+                                              trailing: SizeConstant.padding_10))
+                }
                 
-                HStack {
-                    if ((!isAddingEmail || isAddingGroup) && store.latestEmails.filter({$0.isSelected}).count > 0){
-                        CreateGroupButton(isTapped: $isAddingGroup) { name in
+            } else {
+                Text("error: \(store.error!.localizedDescription)")
+            }
+            
+            HStack {
+                // Create Group Button
+                if ((!isAddingEmail || isAddingGroup) && store.latestEmails.filter({$0.isSelected}).count > 0 && group == nil){
+                    CreateGroupButton(isTapped: $isAddingGroup) { name in
+                        let isExist = groupVM.groups.contains(where: {$0.name == name})
+                        
+                        if isExist {
+                            self.alertMsg = "Group with name \(name) is already exist"
+                            showingAlert.toggle()
+                        } else {
                             let selectedMails = store.latestEmails.filter({ $0.isSelected })
                             if let _ =  groupVM.createGroup(name: name, mails: selectedMails) {
                                 DispatchQueue.main.async {
                                     groupVM.fetchAllGroup()
-                                    self.presentationMode.wrappedValue.dismiss()
+                                    dismiss.callAsFunction()
                                 }
                             }
                         }
                     }
-                    
-                    
-                    if (isAddingEmail || !isAddingGroup){
-                        AddEmailButton(isTapped: $isAddingEmail) {
-                            store.fetchNewAddedEmails()
-                            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
-                                store.fetchAllEmail()
-                            }
+                }
+                
+                // Add Email Button
+                if (isAddingEmail || !isAddingGroup){
+                    AddEmailButton(isTapped: $isAddingEmail) {
+                        store.fetchNewAddedEmails()
+                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0) {
+                            store.fetchAllEmail()
                         }
                     }
-                    
                 }
-                .padding(.horizontal, 5)
+                
+                // Update Email Button
+                if (group != nil && !isAddingEmail){
+                    updateButton
+                        .frame(height: SizeConstant.size_37)
+                        .padding(.horizontal, SizeConstant.padding_10)
+                        .shadowModifier()
                 }
-            .navigationBarTitle("Select Emails")
-        
+            }
+            .padding(.horizontal, SizeConstant.padding_5)
+            .padding(.bottom, SizeConstant.padding_5)
         }
+        .alert(alertMsg, isPresented: $showingAlert) {
+            Button(StringConstant.ok, role: .cancel) { }
+        }
+        .navigationBarTitle(StringConstant.selectEmail)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: backButton)
         .scrollContentBackground(.hidden)
-        .onAppear {
-            store.fetchAllEmail()
-        }
-        
-    }
-    
-}
-
-struct CreateGroupView_Previews: PreviewProvider {
-    static var previews: some View {
-        CreateGroupView(store: EmailViewModel())
-            .environmentObject(GroupViewModel())
     }
 }
-

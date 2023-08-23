@@ -13,12 +13,12 @@ struct CreateGroupButton: View {
     @ObservedObject private var groupVM = GroupViewModel()
     @FocusState private var focus: Bool
     var callBack: (String)->()
-    
+    var groupName = "Create Group"
     var body: some View {
         HStack {
             
             if isTapped {
-                TextField("Group Name", text: $groupVM.group)
+                TextField(StringConstant.groupName, text: $groupVM.group)
                     .focused(self.$focus)
                     .padding(.horizontal, 10)
                     .padding(.vertical, 5)
@@ -32,7 +32,7 @@ struct CreateGroupButton: View {
                 withAnimation {
                     
                     if isTapped && groupVM.group != "" {
-                        callBack(groupVM.group)
+                            callBack(groupVM.group)
                     }
                     
                     isTapped.toggle()
@@ -45,20 +45,17 @@ struct CreateGroupButton: View {
             } label: {
                 HStack{
                     if !isTapped {
-                        Text("Create Group")
+                        Text(groupName)
                             .fontWeight(.bold)
                             .foregroundColor(Color.main)
                     }
-                    Image(systemName: "plus.circle.fill")
-                        .foregroundColor(Color.main)
-                        .font(.system(size: 25))
+                    Image.add
+                        .buttonImageModifier()
                         .rotationEffect(Angle.degrees(isTapped ? -45 : 0))
                         .rotationEffect(Angle.degrees((groupVM.group != "") ? -45 : 0))
                     
                 }
             }
-            
-            
         }
         .padding(.horizontal, 10)
         .padding(.vertical, 5)

@@ -16,8 +16,7 @@ struct EmailCardView: View {
                 .foregroundColor(Color.main)
             Spacer()
             if email.isSelected {
-                
-                Image(systemName: "checkmark.circle.fill")
+                Image.select
                     .foregroundColor(Color.main)
             }
         }

@@ -16,7 +16,7 @@ class GroupStore {
 
     private let groups = Table("groups")
 
-    private let id = Expression<UUID>("id")
+    private let id = Expression<Int64>("id")
     private let name = Expression<String>("groupName")
     private let emails = Expression<String>("emails")
 
@@ -51,6 +51,7 @@ class GroupStore {
         }
         do {
             try database.run(groups.create { table in
+                table.column(id, primaryKey: .autoincrement)
                 table.column(name)
                 table.column(emails)
             })
@@ -81,12 +82,23 @@ class GroupStore {
         }
     }
     
+    
+    func genrateID() -> Int64 {
+//        let randomID = UInt64.random(in: 0...UInt64.max) - 1
+        var random64 = Int64(arc4random()) + (Int64(arc4random()) << 32)
+    
+        return random64
+    }
+    
+    
+    
     func insert(name: String, mails: [EmailModel]) -> Int64? {
         guard let database = db else { return nil }
         guard let mail = encodeEmails(emails: mails) else { return nil }
-        let insert = groups.insert(self.name <- name,
-                                  self.emails <- mail)
-
+        let insert = groups.insert(
+            self.name <- name,
+            self.emails <- mail)
+        
         do {
             let rowID = try database.run(insert)
             return rowID
@@ -107,7 +119,7 @@ class GroupStore {
                      print("error")
                     return []
                 }
-                g.append(GroupModel(name: group[name], email: email))
+                g.append(GroupModel(id: group[id], name: group[name], email: email))
             }
         } catch {
             print(error)
@@ -132,9 +144,9 @@ class GroupStore {
 //        return mail
 //    }
 
-    func update(id: UUID, name: String,mails: [EmailModel]) -> Bool {
+    func update(id: Int64, name: String,mailIDs: [EmailModel]) -> Bool  {
         guard let database = db else { return false }
-        guard let mail = encodeEmails(emails: mails) else { return false }
+        guard let mail = encodeEmails(emails: mailIDs) else { return false }
         let mails = groups.filter(self.id == id)
         do {
             
@@ -143,6 +155,7 @@ class GroupStore {
                 self.emails <- mail
             ])
             if try database.run(update) > 0 {
+                print("updated")
                 return true
             }
         } catch {
@@ -151,7 +164,7 @@ class GroupStore {
         return false
     }
 
-    func delete(id: UUID) -> Bool {
+    func delete(id: Int64) -> Bool {
         guard let database = db else {
             return false
         }

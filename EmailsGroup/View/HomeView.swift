@@ -9,74 +9,66 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var viewModel: GroupViewModel
+    @EnvironmentObject var emailVM: EmailViewModel
     @State private var isPresentCreatView: Bool = false
+    @State private var selectedGroup: GroupModel? = nil
+
     var body: some View {
-        NavigationStack {
-            VStack(spacing:0){
+        NavigationView {
+            VStack(spacing:SizeConstant.zero){
                 if viewModel.groups.count > 0{
-                        List {
-                            ForEach(viewModel.groups, id: \.id) { (group) in
-                                    Button(action: {
-                                        withAnimation {
-                                            
-                                        }
-                                    }) {
-                                        GroupCardView(group: group)
-                                    }.buttonStyle(.automatic)
-                                }
-                            .listRowBackground(Color.background)
-                            .listRowInsets(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
+                    List {
+                        ForEach(viewModel.groups, id: \.id) { (group) in
+                            GroupCardView(group: group) {
+                                emailVM.updatedEmails(emails: group.email)
+                                selectedGroup = group
+                                isPresentCreatView.toggle()
+                            }
                         }
-                
+                        .onDelete(perform: viewModel.deleteTask(at:))
+                        .listRowBackground(Color.background)
+                        .listRowInsets(EdgeInsets(top: SizeConstant.padding_5, leading: SizeConstant.padding_10, bottom: SizeConstant.padding_5, trailing: SizeConstant.padding_10))
                     }
+                }
                 
                 HStack {
                     Spacer()
                     addButton()
                     Spacer()
                 }
-                }
-            
-            .navigationTitle("Email Groups")
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationDestination(isPresented: $isPresentCreatView) {
-                CreateGroupView(store: EmailViewModel())
-                    .environmentObject(viewModel)
+                .padding(.bottom, SizeConstant.padding_5)
             }
             
+            .navigationDestination(isPresented: $isPresentCreatView) {
+                CreateGroupView(group:selectedGroup)
+                    .environmentObject(emailVM)
+                    .environmentObject(viewModel)
+            }
+            .navigationTitle(StringConstant.emailGroups)
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden()
         }
         .ignoresSafeArea()
-        .onAppear {
-            viewModel.fetchAllGroup()
-        }
+        .scrollContentBackground(.hidden)
     }
     
     private func addButton()-> some View {
         Button {
-            
-                isPresentCreatView.toggle()
-           
+            selectedGroup = nil
+            isPresentCreatView.toggle()
         } label: {
             HStack{
-                    Text("Create New Group")
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.main)
-                
-                Image(systemName: "plus.circle.fill")
+                Text(StringConstant.createNewGroup)
+                    .fontWeight(.bold)
                     .foregroundColor(Color.main)
-                    .font(.system(size: 25))
-            
+                
+                Image.add
+                    .buttonImageModifier()
             }
         }
-        .padding(.horizontal, 20)
-        .padding(.vertical, 10)
+        .padding(.horizontal, SizeConstant.padding_20)
+        .padding(.vertical, SizeConstant.padding_10)
         .shadowModifier()
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-            .environmentObject(GroupViewModel())
-    }
-}
